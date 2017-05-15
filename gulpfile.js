@@ -10,7 +10,8 @@ uglify = require('gulp-uglify'),
 cssnano = require('gulp-cssnano'),
 imagemin = require('gulp-imagemin'),
 cache = require('gulp-cache'),
-del = require('del');
+del = require('del'),
+runSequence = require('run-sequence');
 
 // Default Task
 gulp.task('default', function (callback) {
