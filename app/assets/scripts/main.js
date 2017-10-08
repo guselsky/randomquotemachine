@@ -39,17 +39,16 @@
 	var randomQuote = '';
 
 	quoteButton.on('click', function() {
-	var randomNumber = Math.floor(Math.random()* quotes.length);
-	randomQuote = quotes[randomNumber];
-	quoteArea.text(randomQuote.Quote);
-	authorArea.text(randomQuote.Author);
-	tweetButton.removeClass('is-invisible');
+		var randomNumber = Math.floor(Math.random()* quotes.length);
+		randomQuote = quotes[randomNumber];
+		quoteArea.text(randomQuote.Quote);
+		authorArea.text(randomQuote.Author);
+		tweetButton.removeClass('is-invisible');
 	});
 
 	tweetButton.on('click', function() {
 		if (randomQuote != '') {
 			tweetText = randomQuote.Quote + ' - ' + randomQuote.Author;
-			console.log(tweetText);
 			window.open('https://twitter.com/intent/tweet?text='+tweetText);
 		} else {
 			alert('Please generate a Quote!');

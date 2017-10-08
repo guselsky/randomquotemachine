@@ -411,3 +411,6 @@ img {
 
 .is-invisible {
   display: none !important; }
+
+#author-area {
+  height: 30px; }
